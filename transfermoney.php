@@ -43,7 +43,7 @@
                         <td><?php echo $rows['Name']; ?></td>
                         <td><?php echo $rows['Email']; ?></td>
                         <td><?php echo $rows['Balance']; ?></td>
-                        <td><a href="selecteduserdetail.php?id= <?php echo $rows['Account_Number']; ?>"> <button type="button" class="btn btn-danger">Debit</button></a></td>
+                        <td><a href="selecteduserdetail.php?id= <?php echo $rows['Account_Number']; ?>"> <button type="button" class="btn btn-danger">Pay</button></a></td>
                     </tr>
                 </tbody>
             <?php

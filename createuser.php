@@ -21,8 +21,8 @@
         $result = mysqli_query($conn, $sql);
         if ($result) {
             echo "<script> alert('Hurray! User created');
-                               window.location='transfermoney.php';
-                     </script>";
+                    window.location='transfermoney.php';
+                    </script>";
         }
     }
     ?>

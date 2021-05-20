@@ -56,10 +56,12 @@ if (isset($_POST['submit'])) {
 
         $sender = $sql1['Name'];
         $receiver = $sql2['Name'];
-        $sql = "INSERT INTO transaction(`sender`, `receiver`, `balance`) VALUES ('$sender','$receiver','$amount')";
+        //$date = date('m/d/Y h:i:s a', time());
+        $sql = "INSERT INTO transaction(`Sender`, `Receiver`, `Amount`) VALUES ('$sender','$receiver','$amount')";
         $query = mysqli_query($conn, $sql);
-
+        //echo "<script>alert(`$query`)</script>";
         if ($query) {
+            
             echo "<script> alert('Transaction Successful');
             window.location='transactionhistory.php';
             </script>";
@@ -134,7 +136,7 @@ if (isset($_POST['submit'])) {
                     <option class="table" value="<?php echo $rows['Account_Number']; ?>">
                         <?php echo $rows['Name']; ?> 
                         (Account_No:<?php echo $rows['Account_Number']; ?> )
-                        (Balance:<?php echo $rows['Balance']; ?> )
+                        
                     </option>
                 <?php
                 }
